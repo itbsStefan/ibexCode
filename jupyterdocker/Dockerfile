@@ -1,7 +1,5 @@
 FROM jupyterhub/jupyterhub:latest
-
-# apt update
-# apt install nano
+RUN apt update && apt install -y nano
 RUN pip install --no-cache \
     oauthenticator \
     dockerspawner \
@@ -15,7 +13,8 @@ RUN pip install --no-cache \
 # Kopiere einzelne Dateien
 # adds files from your Docker clients current directory.
 COPY README.md /home/jovyan/work/README.md 
-#COPY jupyterhub_config.py /srv/hub/jupyterhub_confing.py # per volume im compose
+COPY README.md /srv/jupyterhub/data/README.md
+#COPY jupyterhub_config.py /srv/jupyterhub/jupyterhub_confing.py # per volume im compose
 RUN mkdir -p /home/jovyan/work/readonly
 RUN mkdir -p /home/jovyan/builfiles/ibexCode
 
