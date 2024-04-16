@@ -1,5 +1,6 @@
+## To build and run the image run:
+## docker compose up -d
 version: '3.8'
-
 services:
   jupyterhub:
     build: . # hier wird das Dockerfile verwendet

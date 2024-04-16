@@ -4,6 +4,9 @@ RUN pip install --no-cache \
     oauthenticator \
     dockerspawner \
     jupyterhub-nativeauthenticator
+# Von Chris verwendet    
+#    jupyterhub-idle-culler \
+#    jupyterlab-git \    
 
 WORKDIR /home/jovyan/work 
 
