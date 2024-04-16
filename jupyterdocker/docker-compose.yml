@@ -4,14 +4,14 @@ version: '3.8'
 services:
   jupyterhub:
     build: . # hier wird das Dockerfile verwendet
-    image: stefan_jupyterhub
+    image: v3inberlin_jupyterhub
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock
-      - jupyterhub_data:/srv/hub/data
-      - ./jupyterhub_config.py:/srv/hub/jupyterhub_config.py
+      - jupyterhub_data:/srv/jupyterhub/data
+      - ./jupyterhub_config.py:/srv/jupyterhub/jupyterhub_config.py
 
       ## und weitere Verzeichnisse nach notebook_dir
-      - ./coding-akademie-python-crashkurs /home/jovyan/work/readonly
+      #- /home/intrepid-ibex/2bhCode/dockerJupyterServer/coding-akademie-python-crashkurs /home/jovyan/work/readonly
       ## einhängen
     ports:
       - "8000:8000"
@@ -25,6 +25,6 @@ volumes:
 networks:
   jupyterhub:
     name: jupyterhub
-    
+
 # docker-compose up -d # ausführen um den JupyterHub-Server zu starten
 

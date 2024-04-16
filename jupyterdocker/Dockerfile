@@ -1,5 +1,7 @@
 FROM jupyterhub/jupyterhub:latest
 
+# apt update
+# apt install nano
 RUN pip install --no-cache \
     oauthenticator \
     dockerspawner \
@@ -8,19 +10,19 @@ RUN pip install --no-cache \
 #    jupyterhub-idle-culler \
 #    jupyterlab-git \    
 
-WORKDIR /home/jovyan/work 
+#WORKDIR /home/jovyan/work 
 
 # Kopiere einzelne Dateien
 # adds files from your Docker clients current directory.
-COPY README.md ./README.md 
+COPY README.md /home/jovyan/work/README.md 
 #COPY jupyterhub_config.py /srv/hub/jupyterhub_confing.py # per volume im compose
 RUN mkdir -p /home/jovyan/work/readonly
 RUN mkdir -p /home/jovyan/builfiles/ibexCode
 
 # Kopie Ordner zum Serverimage
 # eins von beiden Quellen aus dem online Repository oder lokal vom Entwicklungsrechner
-RUN cd /home/jovyan/builfiles/ibexCode
-ADD gitOnline .
+#RUN cd /home/jovyan/builfiles/ibexCode
+ADD gitOnline /home/jovyan/builfiles/ibexCode
 # alternativ copy the source-scripts to a folder
 #RUN git clone https://github.com/itbsStefan/ibexCode.git # (dafür muss git im Image installiert sein)
 RUN cd ~

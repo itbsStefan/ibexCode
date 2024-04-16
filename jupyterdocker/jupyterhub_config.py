@@ -1,3 +1,4 @@
+# vom Dockercontainer dockerjupyterserver-jupyterhub-1 image inberlin_jupyterhub geändert!!! 
 # cd jupyterdocker/
 # pip install dockerspawner jupyterhub-nativeauthenticator oauthenticator
 from dockerspawner import DockerSpawner
@@ -29,6 +30,6 @@ c.GenericOAuthenticator.enable_auth_state = True
 c.Authenticator.allowed_users = set()
 c.NativeAuthenticator.create_system_users = True ## dem Host bekannte Benutzer
 
-c.Authenticator.admin_users = {'stefan'}
+c.Authenticator.admin_users = {'stefan','intrepid-ibex','ibex'}
 c.NativeAuthenticator.open_signup = True
 
