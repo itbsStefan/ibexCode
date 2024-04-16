@@ -2,13 +2,22 @@
 
 diese README.md Datei sollte im DockerHub Image per 
 
-''git clone https://github.com/itbsStefan/ibexCode.git  /srv/hubdateien''
+''git clone https://github.com/itbsStefan/ibexCode.git  /srv/hubdateien/gitOnline''
 
 benutzt werden. TODO Dateien in jupyterdocker Ordner müssen angepasst werden!
 
-cd jupyterdocker/ 
+cd gitOnline
+cd jupyterdocker
+(base) @ibex:$ cp docker-compose.yml ../..
+(base) @ibex:$ cp Dockerfile ../..
+(base) @ibex:$ cp jupyterhub_config.py ../..
 
 Kommentare aus der jupyterhub_config.py einmal vor dem Docker build ausführen
+
+pip install dockerspawner jupyterhub-nativeauthenticator oauthenticator
+docker pull jupyter/datascience-notebook:latest
+docker compose up -d
+
 
 # JupyterHub mit DockerSpawner
 
