@@ -46,9 +46,9 @@ Dieses Projekt enthält eine Beispielkonfiguration für einen JupyterHub-Server,
 
 Viel Spaß :-)
 
-http://wiki.itbs.selfhost.co/doku.php?id=ibex:kursinhalte:kursteil2:start
+[http://wiki.itbs.selfhost.co/doku.php?id=ibex:kursinhalte:kursteil2:start](https://blmgeotest.synology.me/dokuwiki/doku.php?id=ibex:kursinhalte:kursteil2:start)
 
-http://wiki.itbs.selfhost.co/doku.php?id=playground:about:coworking:jupyterhub
+[http://wiki.itbs.selfhost.co/doku.php?id=playground:about:coworking:jupyterhub](https://blmgeotest.synology.me/dokuwiki/doku.php?id=playground:about:coworking:jupyterhub)
 
 
 
